@@ -563,3 +563,159 @@ footer { background: var(--navy-deep); color: white; padding-top: 80px; }
     color: var(--primary-blue);
     font-weight: 600;
 }
+
+/* =========================================================
+   RESPONSIVE MOBILE STYLING (HP & TABLET)
+   ========================================================= */
+
+@media (max-width: 768px) {
+    /* Container & Section */
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Navigation Bar */
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--navy-deep);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 68px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 68px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 40px 24px;
+        gap: 20px;
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-subtle);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 130px 16px 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        font-size: 0.98rem;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Cursor Interaction Disable on Touch Screens */
+    .cursor-dot, 
+    .cursor-outline {
+        display: none !important;
+    }
+
+    /* Grid layouts to single column */
+    .grid-2, 
+    .grid-3, 
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Cards & Timeline */
+    .info-card, 
+    .team-card, 
+    .ops-card, 
+    .risk-card,
+    .contact-card {
+        padding: 24px 20px;
+    }
+
+    .timeline-box {
+        padding: 20px;
+    }
+
+    .timeline-box:hover {
+        transform: translateY(-4px); /* Mengubah efek geser samping ke atas agar tidak memicu overflow */
+    }
+
+    /* RAB Table Adjustments */
+    .rab-table th, 
+    .rab-table td {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+        white-space: nowrap; /* Mencegah baris teks terpotong aneh */
+    }
+
+    .rab-table tfoot {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+        padding-top: 50px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+/* Penyesuaian khusus untuk Layar HP Sangat Kecil (<= 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-badge {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+    }
+
+    .metric-number {
+        font-size: 2rem;
+    }
+}
