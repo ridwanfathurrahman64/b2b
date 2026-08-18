@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaLogic — Farm to Table Perikanan Terintegrasi</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,11 +20,12 @@
             <a href="#hero" class="nav-logo">
                 <i class="fa-solid fa-fish-fins"></i> Aqua<span>Logic</span>
             </a>
+            
+            <!-- Toggle Menu HP -->
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <i class="fa-solid fa-bars"></i>
             </div>
+
             <ul class="nav-menu">
                 <li><a href="#ringkasan" class="nav-link">Ringkasan</a></li>
                 <li><a href="#tim" class="nav-link">Tim Kami</a></li>
@@ -57,18 +59,18 @@
     </header>
 
     <div class="wave-container">
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" />
-            <use xlink:href="#gentle-wave" x="48" y="3" />
-            <use xlink:href="#gentle-wave" x="48" y="5" />
-            <use xlink:href="#gentle-wave" x="48" y="7" />
-        </g>
-    </svg>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" />
+                <use xlink:href="#gentle-wave" x="48" y="3" />
+                <use xlink:href="#gentle-wave" x="48" y="5" />
+                <use xlink:href="#gentle-wave" x="48" y="7" />
+            </g>
+        </svg>
     </div>
 
     <!-- SUBBAB 1: RINGKASAN & LATAR BELAKANG -->
@@ -252,46 +254,47 @@
         </div>
     </section>
 
-    <!-- FOOTER / KONTAK -->
-     <!-- CONTACT SECTION -->
-<section id="contact" class="section bg-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Informasi Kontak & Kemitraan</h2>
-      <p>Terhubung langsung dengan tim pengembang AquaLogic untuk diskusi proposal dan peluang investasi.</p>
-    </div>
-    
-    <div class="contact-grid">
-      <!-- Email -->
-      <div class="contact-card">
-        <div class="contact-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <h4>Email Investor</h4>
-        <a href="mailto:investor@aqualogic.id">investor@aqualogic.id</a>
-      </div>
+    <!-- CONTACT SECTION -->
+    <section id="kontak" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Informasi Kontak & Kemitraan</h2>
+                <p>Terhubung langsung dengan tim pengembang AquaLogic untuk diskusi proposal dan peluang investasi.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Investor</h4>
+                    <a href="mailto:investor@aqualogic.id">investor@aqualogic.id</a>
+                </div>
 
-      <!-- WhatsApp / Phone -->
-      <div class="contact-card">
-        <div class="contact-icon">
-          <i class="fab fa-whatsapp"></i>
-        </div>
-        <h4>WhatsApp / Diskusi</h4>
-        <a href="https://wa.me/6281234567890" target="_blank">+62 812-2341-9252</a>
-      </div>
+                <!-- WhatsApp -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp / Diskusi</h4>
+                    <a href="https://wa.me/6281223419252" target="_blank">+62 812-2341-9252</a>
+                </div>
 
-      <!-- Location -->
-      <div class="contact-card">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
+                <!-- Location -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Lokasi Operasional</h4>
+                    <p>Sleman, D.I. Yogyakarta, Indonesia</p>
+                </div>
+            </div>
         </div>
-        <h4>Lokasi Operasional</h4>
-        <p>Sleman, D.I. Yogyakarta, Indonesia</p>
-      </div>
-    </div>
-  </div>
-</section>
-    <footer id="kontak">
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
         <div class="container footer-content">
             <div class="footer-brand">
                 <h2>Aqua<span>Logic</span></h2>
@@ -307,7 +310,7 @@
             <div class="footer-contact">
                 <h4>Kemitraan Restoran B2B</h4>
                 <p><i class="fa-solid fa-envelope"></i> mitra@aqualogic.id</p>
-                <p><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +62 812-2341-9252</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -315,7 +318,6 @@
         </div>
     </footer>
 
-   
     <script src="script.js"></script>
 </body>
 </html>
