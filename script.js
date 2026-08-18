@@ -1,9 +1,57 @@
 /* =========================================================
-   AQUALOGIC — INTERACTIVE CURSOR & SPOTLIGHT SCRIPT
+   AQUALOGIC — MASTER INTERACTIVE SCRIPT
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. CUSTOM CURSOR TRACKING
+    
+    // 1. MOBILE MENU TOGGLE & SWITCH IKON
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    const menuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
+
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Ubah ikon antara Hamburger (garis 3) dan Silang (X)
+            if (menuIcon) {
+                if (navMenu.classList.contains('active')) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                } else {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Tutup menu otomatis saat item navigasi diklik
+        document.querySelectorAll('.nav-link, .nav-btn').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+
+    // 2. NAVBAR SCROLL & SHADOW EFFECT
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                navbar.classList.add('scrolled');
+                navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.08)';
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    }
+
+    // 3. CUSTOM CURSOR TRACKING (Desktop Only)
     const cursorDot = document.getElementById('cursor-dot');
     const cursorOutline = document.getElementById('cursor-outline');
 
@@ -28,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. CARD SPOTLIGHT EFFECT (Pelacak posisi kursor pada kartu)
+    // 4. CARD SPOTLIGHT EFFECT
     const cards = document.querySelectorAll('.info-card, .team-card, .ops-card');
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -39,20 +87,4 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
-
-    // 3. NAVBAR SCROLL & MOBILE MENU
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-    });
-
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    if (mobileMenu && navMenu) {
-        mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navMenu.classList.remove('active'));
-        });
-    }
 });
